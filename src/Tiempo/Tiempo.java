@@ -1,0 +1,78 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Tiempo;
+
+/**
+ *
+ * @author rodol
+ */
+public class Tiempo {
+    private int hora;
+    private int minuto;
+    private int segundo;
+
+    public int getHora() {
+        return hora;
+    }
+
+    public int getMinuto() {
+        return minuto;
+    }
+
+    public int getSegundo() {
+        return segundo;
+    }
+
+    public void setHora(int hora) {
+        this.hora = hora;
+    }
+
+    public void setMinuto(int minuto) {
+        this.minuto = minuto;
+    }
+
+    public void setSegundo(int segundo) {
+        this.segundo = segundo;
+    }
+
+    public Tiempo() {
+        this.hora = 0;
+        this.minuto = 0;
+        this.segundo = 0;
+    }
+    
+    public void correr(){
+        segundo++;
+        if (segundo == 60) {
+            segundo = 0;
+            minuto++;
+            if (minuto == 60) {
+                minuto = 0;
+                hora++;
+                if (hora == 24) {
+                    hora = 0;
+                }
+            }
+        }
+    }
+
+    @Override
+    public String toString() {
+        String h,m,s;
+        h = String.valueOf(hora);
+        if (hora<10){
+            h="0".concat(h);
+        }
+        m = String.valueOf(minuto);
+        if (minuto < 10){
+            m="0".concat(m);
+        }
+        s = String.valueOf(segundo);
+        if (segundo<10){
+            s="0".concat(s);
+        }
+        return h + ":" + m + ":" + s;
+    }
+}
