@@ -4,10 +4,26 @@
  */
 package cronometro;
 
+import Tiempo.Controlable;
+import Tiempo.Tiempo;
+
 /**
  *
  * @author llean
  */
-public class cronometro {
+public class cronometro extends Tiempo implements Controlable {
+
+    @Override
+    public void iniciar() {
+        
+         }
+
+    @Override
+    public void detener() {
+      
+    }
+
+
+    
     
 }
