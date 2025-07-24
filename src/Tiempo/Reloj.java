@@ -16,7 +16,11 @@ public class Reloj extends Tiempo implements Configurable{
         this.minuto = m;
         this.segundo = s;
     }
-    
+
+    public Reloj() {
+        super();
+        this.activo = true;
+    }
     
     
 }
