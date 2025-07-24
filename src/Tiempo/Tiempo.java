@@ -22,15 +22,17 @@ public class Tiempo {
     }
     
     public void correr(){
-        segundo++;
-        if (segundo == 60) {
-            segundo = 0;
-            minuto++;
-            if (minuto == 60) {
-                minuto = 0;
-                hora++;
-                if (hora == 24) {
-                    hora = 0;
+        if(this.activo){
+            segundo++;
+            if (segundo == 60) {
+                segundo = 0;
+                minuto++;
+                if (minuto == 60) {
+                    minuto = 0;
+                    hora++;
+                    if (hora == 24) {
+                        hora = 0;
+                    }
                 }
             }
         }
