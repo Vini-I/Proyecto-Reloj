@@ -15,12 +15,12 @@ public class cronometro extends Tiempo implements Controlable {
 
     @Override
     public void iniciar() {
-        
+        this.activo=true;
          }
 
     @Override
     public void detener() {
-      
+      this.activo=false;
     }
 
 
