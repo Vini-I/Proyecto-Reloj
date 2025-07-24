@@ -73,7 +73,6 @@ public class Tiempo {
         if (segundo<10){
             s="0".concat(s);
         }
+        return h + ":" + m + ":" + s;
     }
-    
-    
 }
